@@ -1,0 +1,17 @@
+{
+  "name": "barebones-aws-lambda-with-mfa",
+  "version": "0.1.0",
+  "description": "A barebones example of how to deploy to AWS Lambda using MFA and SAM CLI, with the Least Privilege IAM policy.",
+  "main": "app.js",
+  "repository": "https://github.com/DaveAldon/Barebones-AWS-Lambda-with-MFA",
+  "author": "davealdon",
+  "license": "MIT",
+  "scripts": {
+    "init": "cd SAM-Project && npm install && cd ..",
+    "build": "cd SAM-Project && sam build && cd ..",
+    "invoke": "cd SAM-Project && sam local invoke && cd ..",
+    "test": "cd SAM-Project && jest && cd ..",
+    "deploy": "cd SAM-Project && sam deploy --guided --stack-name sam-barebones-aws-lambda-with-mfa --config-env mfa && cd ..",
+    "mfa": "cd utils && sh generate_mfa_tokens.sh $CODE && cd .."
+  }
+}
