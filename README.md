@@ -1,4 +1,6 @@
-# Barebones-AWS-Lambda-with-MFA
+<p float="left">
+<img src="./resources/lambda.png" width="100%">
+</p>
 
 A barebones example of how to deploy to AWS Lambda using [MFA](https://aws.amazon.com/iam/features/mfa/) and [SAM CLI](https://aws.amazon.com/serverless/sam/), with the [Least Privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) IAM policy.
 
