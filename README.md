@@ -119,11 +119,12 @@ Then navigate to the url, and you should see this result in your browser:
 {"message":"hello world"}
 ```
 
-#### Troubleshooting
+### Troubleshooting
 
 There are a number of random things that can go wrong during this entire Lambda process. I've tried to include some of the most common issues, and how to resolve them.
 
-**##### Deployment Errors**
+#### Deployment Errors
+
 If you get an error like the following during a deployment:
 
 ```
@@ -138,7 +139,7 @@ You need to rerun the mfa token generation command:
    or
 2. `sh generate_mfa_tokens.sh <YOUR_CODE>`
 
-##### Post-Deployment Errors
+#### Post-Deployment Errors
 
 If you try invoking the Lambda function via the Function URL and get an error like the following:
 
@@ -173,7 +174,7 @@ This is because there's an issue with the handler. There are a couple things to 
 1. Make sure that the handler in the [template.yaml](./SAM-Project/hello-world/../template.yaml) config is fully qualified, with its parent folder name included in the path, and that the functions are named correctly
 2. If you're uploading your file via zip, you'll need to use `index` instead of `app`
 
-##### Investigating Authentication Issues
+#### Investigating Authentication Issues
 
 `aws configure list` - shows you the current configuration and if your profile is set correctly or not. Example output:
 
